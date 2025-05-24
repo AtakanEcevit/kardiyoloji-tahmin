@@ -13,7 +13,7 @@ from pydantic import BaseModel
 app = FastAPI()
 
 # Model yükle
-MODEL_PATH = os.path.join("..", "models", "best_wait_time_model.joblib")
+MODEL_PATH = "rf_pipe.joblib"
 if os.path.exists(MODEL_PATH):
     model = joblib.load(MODEL_PATH)
     print("Model feature_in_:", model.feature_names_in_)
